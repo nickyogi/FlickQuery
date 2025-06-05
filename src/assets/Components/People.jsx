@@ -15,7 +15,7 @@ function People() {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
 
-  document.title = "person Shows | " + category.toUpperCase();
+  document.title = "People  | " + category.toUpperCase();
 
   const navigate = useNavigate();
 

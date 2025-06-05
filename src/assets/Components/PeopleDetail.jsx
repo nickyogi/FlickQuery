@@ -19,6 +19,8 @@ function PeopleDetail() {
   const { pathname } = useLocation();
   const dispatch = useDispatch();
 
+  document.title = "FlickQuery | Detail";
+
   const [category, setCategory] = useState("movie");
 
   const { info } = useSelector((state) => state.person);

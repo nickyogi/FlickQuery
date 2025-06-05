@@ -20,7 +20,9 @@ function TVDetail() {
   const { id } = useParams();
   const { pathname } = useLocation();
   const dispatch = useDispatch();
-
+  
+  document.title = "FlickQuery | Detail";
+  
   const { info } = useSelector((state) => state.tv);
 
   const [showPopup, setShowPopup] = useState(false);

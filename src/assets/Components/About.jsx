@@ -6,6 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 function About() {
     const navigate = useNavigate();
 
+    document.title = "FlickQuery | About";
+
     return (
         <div className="text-zinc-400 h-screen w-full bg-[#1F1E24] overflow-x-hidden overflow-y-auto">
           <nav className="w-full h-[8vh] flex items-center justify-between  mt-[1vw] sm:px-5 pt-2">

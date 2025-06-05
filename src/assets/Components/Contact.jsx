@@ -10,6 +10,9 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  document.title = "FlickQuery | Contact";
+
+
   const navigate = useNavigate();
 
   const sendEmail = (e) => {
@@ -161,9 +164,9 @@ const Contact = () => {
             </div>
           </form>
         </div>
-        <div className="w-full mt-[2vw] sm:mt-0 sm:w-[50%] h-full">
+        <div className="w-full mt-[2vw] sm:mt-0 sm:w-[50%] h-[60vw] sm:h-[35vw] overflow-hidden">
           <img
-            className="sm:h-[31vw] sm:mt-[2vw] sm:w-[45vw]"
+            className="sm:h-[31vw] sm:mt-[5vw] sm:w-[45vw]"
             src="/Images/contact.png"
             alt="Contact Image"
           />
