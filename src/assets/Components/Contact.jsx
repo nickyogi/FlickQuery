@@ -69,7 +69,7 @@ const Contact = () => {
         <h1 className="text-[8vw]  mt-[8vw] sm:mt-0 sm:text-[3vw] font-bold text-[#6556CD] tracking-wider">
           CONTACT US
         </h1>
-        <p className="text-[3vw] sm:text-[1.2vw] font-semibold uppercase w-full sm:w-[82%] sm:leading-[1.5vw]">
+        <p className="text-[3vw] sm:text-[1.2vw] font-semibold sm:uppercase w-full sm:w-[82%] sm:leading-[1.5vw]">
           Let's connect we are here to help, and we'd love to hear from you!
           whether you have a question, comment or just want to chat, you can
           reach out to us through E-mail, Linkedin, Github for pull request

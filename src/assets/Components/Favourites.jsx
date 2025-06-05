@@ -2,11 +2,18 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import PopUp from "./partials/PopUp";
 
-function Favourates({setFavourites}) {
+function Favourates({ setFavourites }) {
   const [cardData, setCardData] = useState(
     JSON.parse(localStorage.getItem("favouriteCards")) || []
   );
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleSuccessAction = () => {
+    setShowPopup(true);
+  };
 
   const removeFavourite = (link) => {
     toast.warning("Item removed from Favorites");
@@ -22,10 +29,20 @@ function Favourates({setFavourites}) {
 
   return (
     <div className="relative flex flex-wrap gap-3 sm:gap-[5vw] px-2 sm:px-5 overflow-y-none overflow-x-auto text-white">
-      <div className="absolute sm:w-[77vw] w-[92vw] pb-10  flex items-center justify-between">
-        <div onClick={setFavourites} className="flex items-center text-zinc-100 text-xl font-semibold">
+      <div className="sm:hidden w-full absolute bottom-[20vw]">
+        <PopUp
+          message="Deleted !"
+          show={showPopup}
+          color={true}
+          onClose={() => setShowPopup(false)}
+        />
+      </div>
+      <div className="absolute sm:w-[73vw] lg:w-[76.5vw] w-[92vw] pb-10  flex items-center justify-between">
+        <div
+          onClick={setFavourites}
+          className="flex items-center text-zinc-100 text-xl font-semibold"
+        >
           <svg
-           
             className="h-8 w-8 sm:h-10 sm:w-10 cursor-pointer -mr-1 sm:-mr-2 hover:text-[#6556CD]"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -37,11 +54,12 @@ function Favourates({setFavourites}) {
         </div>
         <div
           onClick={() => {
-            localStorage.removeItem('favouriteCards')
+            localStorage.removeItem("favouriteCards");
             setCardData([]);
+            handleSuccessAction();
           }}
           title="Remove"
-          className="cursor-pointer bg-red-600 rounded-full text-xs sm:text-base px-2 py-1 flex items-center justify-center"
+          className="cursor-pointer bg-red-600 rounded-full text-xs sm:text-base px-2  py-1 flex items-center justify-center"
         >
           Delete All
           <svg
@@ -55,17 +73,17 @@ function Favourates({setFavourites}) {
         </div>
       </div>
       <div className=" w-full mb-10">
+        <span className="hidden sm:block">
         <ToastContainer />
+        </span>
       </div>
-      
 
       {cardData.length > 0 ? (
-        cardData.map((data, index) => 
+        cardData.map((data, index) => (
           <div key={index} className="relative">
             <Link
               to={data.link}
-              
-              className="relative block rounded-lg sm:mx-0 mx-auto overflow-hidden sm:w-[15vw] w-[44vw] bg-zinc-900 sm:h-[45vh] h-[60vw] mb-5 shrink-0 cursor-pointer]"
+              className="relative block rounded-lg sm:mx-0 mx-auto overflow-hidden  sm:w-[25vw]  md:w-[20vw] w-[40vw] bg-zinc-900 sm:h-[35vw] md:h-[22vw] h-[60vw] mb-5 shrink-0 cursor-pointer]"
             >
               {data.imgeSrc ? (
                 <img
@@ -97,7 +115,7 @@ function Favourates({setFavourites}) {
                 </p>
 
                 <p className="absolute bottom-2 flex sm:gap-5 gap-2 select-none">
-                  <span className="flex items-center sm:text-[0.8vw]  text-[2.7vw]">
+                <span className="flex items-center sm:text-[1.5vw] md:text-[0.8vw]  text-[2.7vw]">
                     <svg
                       className="h-3 w-3 mr-1 text-[#EA8100]"
                       xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +126,7 @@ function Favourates({setFavourites}) {
                     </svg>{" "}
                     {data.release || "No Information"}
                   </span>
-                  <span className="flex items-center sm:text-[0.8vw] text-[2.7vw]">
+                  <span className="flex items-center sm:text-[1.5vw] md:text-[0.8vw]  text-[2.7vw]">
                     <svg
                       className="h-3 w-3 mr-1 text-[#EA8100]"
                       xmlns="http://www.w3.org/2000/svg"
@@ -124,12 +142,15 @@ function Favourates({setFavourites}) {
             </Link>
 
             <div
-              onClick={() => removeFavourite(data.link)}
+              onClick={() => {
+                removeFavourite(data.link);
+                handleSuccessAction();
+              }}
               title="Remove"
-              className="absolute cursor-pointer bg-red-600 sm:top-[43%] top-[35%] sm:-right-4 -right-4 rounded-full sm:h-10 sm:w-10 h-10 w-10 flex items-center justify-center"
+              className="absolute cursor-pointer bg-red-600 sm:top-[43%] top-[30%] sm:-right-4 -right-1 rounded-full sm:h-10 sm:w-10 h-8 w-8 flex items-center justify-center"
             >
               <svg
-                className="sm:h-5 sm:w-5  h-6 w-6 text-white"
+                className="  h-5 w-5 text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
@@ -138,7 +159,7 @@ function Favourates({setFavourites}) {
               </svg>
             </div>
           </div>
-        )
+        ))
       ) : (
         <div className="sm:text-[5vw] select-none text-[10vw] sm:pt-0 pt-[20vw] p-5 font-bold mx-auto text-zinc-700">
           <img src="/Images/404-NotFound.gif" alt="" />

@@ -11,7 +11,7 @@ function HorizontalCards({ cardData, title }) {
         <Link
           to={`/${data.media_type || title}/details/${data.id}`}
           key={index}
-          className="relative rounded-lg mx-auto sm:mx-0 overflow-hidden sm:w-[15vw] w-[40vw] bg-zinc-900 sm:h-[22vw] h-[60vw] mb-5 shrink-0 cursor-pointer]"
+          className="relative rounded-lg mx-auto sm:mx-0 overflow-hidden sm:w-[25vw]  md:w-[20vw] w-[40vw] bg-zinc-900 sm:h-[30vw] md:h-[22vw]  h-[60vw] mb-5 shrink-0 cursor-pointer]"
         >
           {data.backdrop_path || data.poster_path ? (
             <img
@@ -58,7 +58,7 @@ function HorizontalCards({ cardData, title }) {
             </p>
 
             <p className="absolute bg-[#18181b] bottom-2 pt-2 flex sm:gap-5 gap-2 select-none">
-              <span className="flex items-center sm:text-[0.8vw]  text-[2.7vw]">
+              <span className="flex items-center sm:text-[1.5vw] md:text-[0.8vw]  text-[2.7vw]">
                 <svg
                   className="h-3 w-3 mr-1 text-[#EA8100]"
                   xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@ function HorizontalCards({ cardData, title }) {
                 </svg>{" "}
                 {data.release_date || data.first_air_date || "No Information"}
               </span>
-              <span className="flex items-center sm:text-[0.8vw] text-[2.7vw]">
+              <span className="flex items-center sm:text-[1.5vw] md:text-[0.8vw] text-[2.7vw]">
                 <svg
                   className="h-3 w-3 mr-1 text-[#EA8100]"
                   xmlns="http://www.w3.org/2000/svg"

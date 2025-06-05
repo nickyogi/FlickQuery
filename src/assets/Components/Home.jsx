@@ -76,11 +76,11 @@ function Home() {
               <h1 className="text-white text-xl font-semibold">FlickQuery</h1>
             </div>
           </span>
-          <div className="sm:pr-[20vw]">
+          <div className=" lg:pr-[20vw] w-full flex items-center justify-end">
             <span className="hidden sm:inline"> 
             <TopNav />
             </span>
-            <span className="sm:hidden absolute w-full top-[3px] right-[50px] sm:top-0 sm:right-12">
+            <span className="sm:hidden ">
               <Search />
             </span>
           </div>

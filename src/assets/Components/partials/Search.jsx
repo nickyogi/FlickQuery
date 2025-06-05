@@ -29,12 +29,12 @@ function Search() {
   }, [query]);
 
   return (
-    <div className={`z-30 relative flex items-center justify-end sm:justify-start gap-3 mx-auto ${searchBar ? 'pr-2 bg-[#1F1E24]' : 'pr-2'} `}>
+    <div className={`z-30 relative flex items-center justify-end sm:justify-start gap-3 mx-auto ${searchBar ? 'pr-2 bg-[#1F1E24]' : 'pr-0'} `}>
       <svg
         onClick={() => setSearchBar((prev) => !prev)}
         
         className={` cursor-pointer ${
-          changColor ? "h-16 w-16 text-zinc-100 bg-[#6556cd] p-[3vw]  rounded-full" : "h-8 w-8 mt-[2.8vw] text-zinc-400"
+          changColor ? "h-16 w-16 text-zinc-100 bg-[#6556cd] p-[3vw]  rounded-full" : "h-8 w-8  text-zinc-400"
         }`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

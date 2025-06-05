@@ -41,7 +41,7 @@ function About() {
             <h1 className="text-[8vw]  mt-[8vw] sm:mt-0 sm:text-[3vw] font-bold text-[#6556CD] tracking-wider">
               About US
             </h1>
-            <p className="text-[3vw] sm:text-[1.2vw] font-semibold uppercase w-full sm:w-full sm:leading-[1.5vw]">
+            <p className="text-[3vw] sm:text-[1.2vw] font-semibold w-full sm:w-full sm:leading-[1.5vw]">
             FlickQuery is a modern web application designed to be your one-stop destination for exploring movies, TV shows, and celebrities. With a sleek and intuitive interface, it offers curated sections for trending and popular content, along with smart filters based on media type and duration. Users can watch official trailers directly within the app using React Player and enjoy a seamless browsing experience thanks to infinite scrolling. Built with cutting-edge technologies like React, React Router DOM, Redux, Tailwind CSS, and React Infinite Scroll, FlickQuery delivers both performance and style in one powerful entertainment platform.
             </p>
           </div>

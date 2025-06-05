@@ -33,7 +33,7 @@ function Nav() {
   ];
   return (
     <div className="relative mt-3 mb-7">
-    <div className={`${navHeight ? "h-[70vw]" : "h-[15vw]" }  w-[full] border-b border-zinc-600 rounded-xl p-3 pt-1 mb-5 duration-300 overflow-hidden`}>
+    <div className={`${navHeight ? "ssss:h-[88vw] sss:h-[82vw]  ss:h-[70vw] bb:h-[65vw] tb:h-[55vw]" : "ssss:h-[18vw] sss:h-[17vw] ss:h-[15vw] bb:h-[14vw] tb:h-[13.2vw]" }  w-full border-b border-zinc-600 rounded-xl p-3 pt-1 mb-5 duration-300 overflow-hidden`}>
       <nav className={`flex flex-wrap items-center justify-center duration-300 gap-x-5 ${navHeight ? "gap-y-3" : "gap-y-6" }`}>
         {navData.map((item, index) => (
           <Link

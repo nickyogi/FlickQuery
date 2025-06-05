@@ -14,6 +14,7 @@ import { asyncloadmovie, removemovie } from "./Store/actions/movieActions";
 import { ToastContainer, toast } from 'react-toastify';
 import { useState } from "react";
 import Search from "./partials/Search";
+import PopUp from "./partials/PopUp";
 
 
 function MovieDetail() {
@@ -24,6 +25,12 @@ function MovieDetail() {
   const { info } = useSelector((state) => state.movie);
 
   const navigate = useNavigate();
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleSuccessAction = () => {
+    setShowPopup(true);
+  };
 
   const [alreadyFavourite, setAlreadyFavourite] = useState();
 
@@ -124,7 +131,7 @@ function MovieDetail() {
             </svg>
           </Link>
         </div>
-        <span className="sm:inline hidden">
+        <span className="md:inline hidden">
         <TopNav />
         </span>
           
@@ -259,13 +266,13 @@ function MovieDetail() {
           )}
 
           <div className="w-[92vw]">
-            <h1 className="text-[8vw] sm:text-[3.5vw] mt-[5vw] sm:mt-0 text-center sm:text-start font-bold sm:flex items-end tracking-wide leading-none">
+            <h1 className="text-[8vw] md:text-[3.5vw] mt-[5vw] md:mt-0 text-center md:text-start font-bold md:flex items-end tracking-wide leading-none">
               {info.detail.name ||
                 info.detail.title ||
                 info.detail.original_name ||
                 info.detail.original_title}
               
-              <small className="sm:inline hidden text-[1.2vw] block text-zinc-200 mx-2 mb-[5px] tracking-normal">{`(${
+              <small className="md:inline hidden text-[1.2vw] block text-zinc-200 mx-2 mb-[5px] tracking-normal">{`(${
                 info.detail.release_date.split("-")[0]
               })`}</small>
             </h1>
@@ -276,7 +283,7 @@ function MovieDetail() {
 
             <hr className="sm:hidden block w-full mx-auto text-zinc-400" />
 
-            <div className="hidden sm:flex items-center justify-between w-[80%]">
+            <div className="hidden md:flex items-center justify-between w-[80%]">
               <div className="flex items-center">
                 <div className="h-[3.5vw] w-[3.5vw] my-3 bg-yellow-600 text-[1.2vw] font-semibold bottom-[25%] rounded-full flex items-center justify-center shadow shadow-yellow-600 ">
                   {(info.detail.vote_average * 10).toFixed()} <sup>%</sup>
@@ -291,7 +298,7 @@ function MovieDetail() {
               )}h ${info.detail.runtime % 60}min`}</span>
             </div>
 
-            <div className="sm:hidden flex mb-10 items-center justify-between w-full">
+            <div className="md:hidden flex mb-10 items-center justify-between w-full">
               <div className="flex flex-col items-center justify-center">
                 <div className="h-[10vw] w-[10vw] my-3 bg-yellow-600 text-[4vw] pt-1 pl-1 font-semibold bottom-[25%] rounded-full flex items-center justify-center shadow shadow-yellow-600 ">
                   {(info.detail.vote_average * 10).toFixed()} <sup>%</sup>
@@ -355,11 +362,28 @@ function MovieDetail() {
 
             <span
              
-              onClick={addToFavourites}
+              onClick={() => {
+                addToFavourites()
+                handleSuccessAction()
+              }}
               className={`inline-block items-center flex select-none ${alreadyFavourite ? "bg-zinc-100 text-[#6556CD]" : "bg-[#6556CD] text-zinc-100"} bg-[#6556CD] cursor-pointer hover:text-[#6556CD] hover:bg-[#ffffff]   duration-300  font-medium mb-5 px-2 py-2 rounded tracking-wider`}
             >
               <span className="hidden sm:inline">
               <ToastContainer />
+              </span>
+              <span className=" sm:hidden">
+              { alreadyFavourite ? <PopUp
+               message="Added!"
+               show={showPopup}
+               color={false}
+               onClose={() => setShowPopup(false)}
+              /> : <PopUp
+               message="Removed!"
+               show={showPopup}
+               color={true}
+               onClose={() => setShowPopup(false)}
+              />} 
+              
               </span>
               <svg
                 className="h-5 w-5 mr-1 inline"

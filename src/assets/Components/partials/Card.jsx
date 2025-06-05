@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 function Card({ data, title }) {
   return (
-    <div className="w-full  min-h-[22vw] px-5 py-2 gap-x-5 sm:gap-x-0 text-white overflow-hidden  flex flex-wrap bg-[#1F1E24]">
+    <div className="w-full  min-h-[22vw] px-5 py-2 pt-10 gap-x-5 sm:gap-x-0 text-white overflow-hidden  flex flex-wrap bg-[#1F1E24]">
       {data.map((d, i) => (
         <Link
           to={`/${d.media_type || title}/details/${d.id}`}
           key={i}
-          className="relative inline-block w-[38vw] sm:w-[14vw] items-start mx-auto my-5 flex flex-col gap-1 shrink-0"
+          className="relative inline-block w-[38vw] sm:w-[14vw] items-start mx-auto my-5 flex flex-col gap-1 shrink-0 hover:scale-110 duration-200"
         >
           <div className="min-h-[52vw] sm:min-h-[22vw]">
           <img
@@ -25,7 +25,7 @@ function Card({ data, title }) {
           </h3>
 
           { d.vote_average ? ( d.vote_average !== "undefined" && d.vote_average !== null && (
-            <div className="h-[10vw] w-[10vw] sm:h-[3vw] sm:w-[3vw] bg-yellow-500 text-[4vw] sm:text-[1.2vw] font-semibold absolute -right-[10%] top-[55%] rounded-full flex items-center justify-center shadow shadow-yellow-600">
+            <div className=" h-[10vw] w-[10vw] sm:h-[3vw] sm:w-[3vw] bg-yellow-500 text-[4vw] sm:text-[1.2vw] font-semibold absolute -right-[10%] top-[55%] rounded-full flex items-center justify-center shadow shadow-yellow-600">
               {(d.vote_average * 10).toFixed()} <sup>%</sup>
             </div>
           ) ) : " "}
