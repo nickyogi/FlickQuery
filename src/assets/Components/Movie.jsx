@@ -75,7 +75,7 @@ function Movie() {
           <span className="sm:inline hidden">
           <TopNav />
           </span>
-          <div className="w-[50%]  flex items-center justify-end pr-5 gap-5">
+          <div className="w-auto  flex items-center justify-end pr-5 gap-5">
             <DropDown
               title="Category"
               options={["popular", "upcoming", "top_rated", "now_playing"]}
