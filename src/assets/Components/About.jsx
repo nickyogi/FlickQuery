@@ -9,7 +9,7 @@ function About() {
     document.title = "FlickQuery | About";
 
     return (
-        <div className="text-zinc-400 h-screen w-full bg-[#1F1E24] overflow-x-hidden overflow-y-auto">
+        <div className="text-zinc-400  flex flex-col justify-between sm:block h-screen w-full bg-[#1F1E24] overflow-x-hidden overflow-y-auto">
           <nav className="w-full h-[8vh] flex items-center justify-between  mt-[1vw] sm:px-5 pt-2">
             <div className="flex items-center gap-1 sm:gap-3">
               <span title="Back">
@@ -112,9 +112,9 @@ function About() {
 
               </div>
             </div>
-            <div className="w-[90%] mx-auto mt-[8vw] sm:mt-0 sm:mx-0 h-[55vw] sm:h-[40vw] overflow-hidden sm:w-[50%] h-full">
+            <div className="w-[90%] mx-auto flex items-end mt-[8vw] sm:mt-0 sm:mx-0 h-[55vw] sm:h-[40vw] overflow-hidden sm:w-[50%] h-full">
               <img
-                className="sm:h-[32vw] sm:mt-[10vw] sm:w-[45vw]"
+                className="sm:h-[32vw] -mb-[4vw] sm:-mb-[2vw]  sm:w-[45vw]"
                 src="/Images/about.png"
                 alt="Contact Image"
               />

@@ -20,7 +20,7 @@ const Loader = () => {
           }
         `}
       </style>
-      <div>
+      <div className="bg-green-300 w-full flex items-center justify-center">
         <div style={loaderStyle} className="absolute m-1"></div>
         <div style={loaderStyle} className="absolute m-1"></div>
         <div style={loaderStyle} className="absolute m-1"></div>

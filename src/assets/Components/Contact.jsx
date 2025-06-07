@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="text-zinc-400 h-screen w-full bg-[#1F1E24] overflow-y-auto">
+    <div className="text-zinc-400 flex flex-col justify-between sm:block h-screen w-full bg-[#1F1E24] overflow-y-auto">
       <ToastContainer />
       <nav className="w-full h-[8vh] flex items-center justify-between  mt-[1vw] sm:px-5 pt-2">
         <div className="flex items-center gap-1 sm:gap-3">
@@ -78,7 +78,7 @@ const Contact = () => {
           reach out to us through E-mail, Linkedin, Github for pull request
         </p>
       </div>
-      <div className="flex flex-col sm:flex-row  mt-[2vw]">
+      <div className="flex flex-col sm:flex-row mt-[2vw]">
         <div className="sm:w-[50%] mt-[5vw] sm:mt-0 w-full flex flex-col">
           <div className="mx-auto w-[70%]  sm:w-[70%] my-[1.5vw] text-[3vw] sm:text-[1.3vw] mb-[4vw] sm:mb-[1.5vw] flex justify-between">
             <a
@@ -164,9 +164,9 @@ const Contact = () => {
             </div>
           </form>
         </div>
-        <div className="w-full mt-[2vw] sm:mt-0 sm:w-[50%] h-[60vw] sm:h-[35vw] overflow-hidden">
+        <div className="w-[90%] mx-auto mt-[8vw] sm:mt-21 sm:mx-0 h-[55vw] sm:h-[35vw] flex items-end overflow-hidden sm:w-[50%] h-full">
           <img
-            className="sm:h-[31vw] sm:mt-[5vw] sm:w-[45vw]"
+            className="sm:h-[33vw] sm:mt-[5vw] sm:w-[45vw]"
             src="/Images/contact.png"
             alt="Contact Image"
           />
