@@ -13,9 +13,10 @@ import PeopleDetail from "./assets/Components/PeopleDetail";
 import Trailer from "./assets/Components/partials/Trailer";
 import Contact from "./assets/Components/Contact";
 import About from "./assets/Components/About";
+import LocomotiveScroll from 'locomotive-scroll';
 
 function App() {
-
+  const locomotiveScroll = new LocomotiveScroll();
   return (
     <div className="min-h-screen w-screen p-0 m-0 bg-[#1F1E24] overflow-y-auto">
       
