@@ -37,8 +37,6 @@ FlickQuery is your gateway to discovering trending movies, TV shows, and people.
 
 Explore the live project: [FlickQuery Live](https://flick-query.vercel.app/)
 
-GitHub Repo: [https://lnkd.in/gcDagJP8](https://github.com/nickyogi/FlickQuery)
-
 ---
 
 ## ✨ Features
@@ -74,5 +72,17 @@ GitHub Repo: [https://lnkd.in/gcDagJP8](https://github.com/nickyogi/FlickQuery)
 ## 🚀 Installation
 
 1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-username/flickquery.git
+   git clone https://github.com/nickyogi/flickquery.git
+
+Edit
+cd flickquery
+Install dependencies:
+
+Edit
+npm install
+Start the development server:
+
+Edit
+npm run dev
+🤝 Contributing
+Contributions are welcome! Feel free to fork the repo and submit a pull request with improvements, bug fixes, or new features.
