@@ -30,6 +30,8 @@ FlickQuery is a sleek and modern web application designed for effortless explora
 ## 🧭 Overview
 
 FlickQuery is your gateway to discovering trending movies, TV shows, and people. With a responsive layout, infinite scroll, official trailers, and favorites management, it offers a smooth and user-friendly browsing experience.
+<img src="/PreviewImages/ProjectPreview-1.PNG" alt="FlickQuery Preview">
+<img src="/PreviewImages/ProjectPreview-2.PNG" alt="FlickQuery Preview"></p>
 
 ---
 
