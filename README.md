@@ -1,12 +1,78 @@
-# React + Vite
+# 🎬 FlickQuery – Modern Movie & TV Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FlickQuery is a sleek and modern web application designed for effortless exploration of movies, TV shows, and celebrities. Built with powerful technologies like React and Redux, it delivers an intuitive and seamless content discovery experience.
 
-Currently, two official plugins are available:
+## 🔧 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React  
+- React Router DOM  
+- Redux  
+- Tailwind CSS  
+- React Infinite Scroll  
+- EmailJS  
+- TMDB API  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📚 Table of Contents
+
+- [Overview](#overview)
+- [Live Demo](#live-demo)
+- [✨ Features](#-features)
+- [📸 UI & Experience](#-ui--experience)
+- [📦 Prerequisites](#prerequisites)
+- [🚀 Installation](#installation)
+- [🤝 Contributing](#contributing)
+- [📝 License](#license)
+
+---
+
+## 🧭 Overview
+
+FlickQuery is your gateway to discovering trending movies, TV shows, and people. With a responsive layout, infinite scroll, official trailers, and favorites management, it offers a smooth and user-friendly browsing experience.
+
+---
+
+## 🌐 Live Demo
+
+Explore the live project: [FlickQuery Live](https://flick-query.vercel.app/)
+
+GitHub Repo: [https://lnkd.in/gcDagJP8](https://github.com/nickyogi/FlickQuery)
+
+---
+
+## ✨ Features
+
+- 🔍 **Search Instantly** – Look up movies, TV shows, or celebrities.
+- 🔝 **Trending Content** – View what's popular right now.
+- 🧠 **Smart Filters** – Sort by media type, duration, or category.
+- 📺 **React Player Integration** – Watch trailers directly in the app.
+- ♾️ **Infinite Scrolling** – Seamlessly load more content as you scroll.
+- ⭐ **Favorites Feature** – Save and manage your favorite content.
+- 💾 **Persistent Storage** – Favorites saved even after page reloads.
+- 🔄 **Full Detail Pages** – Get cast, description, recommendations & seasons.
+- 💌 **Contact Section** – Reach out via LinkedIn, GitHub, or a built-in email form using EmailJS.
+
+---
+
+## 🎨 UI & Experience
+
+- 📱 **Responsive Design** – Looks great on all screen sizes.
+- 🧭 **Intuitive Navigation** – Clean layout for easy browsing.
+- ⚙️ **Smooth Animations** – Fluid transitions using modern libraries.
+- 🔗 **Dedicated About & Contact Pages** – Extra insight and communication.
+
+---
+
+## 📦 Prerequisites
+
+- Node.js
+- npm
+
+---
+
+## 🚀 Installation
+
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/your-username/flickquery.git
