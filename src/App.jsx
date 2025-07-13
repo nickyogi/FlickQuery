@@ -15,6 +15,7 @@ import Contact from "./assets/Components/Contact";
 import About from "./assets/Components/About";
 import LocomotiveScroll from 'locomotive-scroll';
 
+
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
   return (
