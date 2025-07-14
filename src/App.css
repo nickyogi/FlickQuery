@@ -27,8 +27,8 @@ select {
   background: #27272a;
   background-image: none;
   flex: 1;
-  padding: 0 0.5em;
-  color: #fff;
+  padding: 0 0.5em !important;
+  color: #fff !important;
   cursor: pointer;
   font-size: 1em;
   font-family: "Open Sans", sans-serif;

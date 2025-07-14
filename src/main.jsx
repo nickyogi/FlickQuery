@@ -5,7 +5,6 @@ import { Provider } from "react-redux";
 
 import App from "./App.jsx";
 import { store } from "./assets/Components/Store/Store";
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import "./index.css";
 
 const root = document.getElementById("root");
@@ -20,7 +19,4 @@ createRoot(root).render(
   </StrictMode>
 );
 
-// ✅ Register service worker (only in production)
-if (import.meta.env.PROD) {
-  serviceWorkerRegistration.register();
-}
+
